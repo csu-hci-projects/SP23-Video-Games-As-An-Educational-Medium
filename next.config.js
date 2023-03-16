@@ -4,7 +4,6 @@ let assetPrefix = ''
 let basePath = '/'
 
 if (isGithubActions) {
-  // trim off `<owner>/`
   const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '')
 
   assetPrefix = `/${repo}/`
@@ -14,4 +13,8 @@ if (isGithubActions) {
 module.exports = {
   assetPrefix: assetPrefix,
   basePath: basePath,
+  images: {
+    loader: 'imgix',
+    path: 'geopursuit.imgix.net',
+  },
 }
