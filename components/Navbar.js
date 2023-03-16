@@ -36,12 +36,12 @@ const Navbar = () => {
 					</StyledLink>
 				</li>
 				<li>
-					<StyledLink href="/">
+					<StyledLink href="/about">
 						About
 					</StyledLink>
 				</li>
 				<li>
-					<StyledLink href="/">
+					<StyledLink href="/contact">
 						Contact
 					</StyledLink>
 				</li>
