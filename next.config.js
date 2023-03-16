@@ -7,8 +7,8 @@ if (isGithubActions) {
   // trim off `<owner>/`
   const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '')
 
-  assetPrefix = `/${geopursuit}/`
-  basePath = `/${geopursuit}`
+  assetPrefix = `/${repo}/`
+  basePath = `/${repo}`
 }
 
 module.exports = {
