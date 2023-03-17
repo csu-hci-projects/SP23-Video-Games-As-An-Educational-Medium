@@ -1,33 +1,42 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+name: Deploy to GitHub Pages
 
-name: GitHub Pages deploy
 
 on:
   push:
     branches: [main]
 
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
+
+    env:
+      NEXT_PUBLIC_BASE_PATH: /geopursuit
+
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.1
-      - name: Use Node.js 16.x
-        uses: actions/setup-node@v1
+      - name: Get files
+        uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
         with:
-          node-version: '16.x'
-
-      - name: Installing my packages
+          node-version: ${{ matrix.node-version }}
+      - name: Install packages
         run: npm ci
-
-      - name: Build my App
-        run: npm run build && npm run export && touch ./out/.nojekyll
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.4.1
+      - name: Build project
+        run: npm run build
+      - name: Export static files
+        run: npm run export
+      - name: Add .nojekyll file
+        run: touch ./out/.nojekyll
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: public # The branch the action should deploy to.
-          FOLDER: out # The folder the action should deploy.
+          branch: gh-pages
+          folder: out
