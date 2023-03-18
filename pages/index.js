@@ -6,14 +6,34 @@ import styled from 'styled-components'
 const Hero = styled.div`
   height: 80vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: flex-start;
   background: #202733;`
 
   const Heading = styled.h1`
     color: #fff;
     font-size: 6rem;
     font-weight: 900;`
+
+  const Heading2 = styled.h2`
+    color: #fff;
+    font-size: 30px;
+    font-weight: 500;
+    margin-left: 3%;
+    margin-top: 2%;
+    display: block;
+  `
+
+const StyledButton = styled.button`
+  background-color: #2b3547;
+  border-radius: 5px;
+  font-size: 10px;
+  margin-left: 2%;
+  margin-top: 4%;
+  border-color: #2b3547;
+  width: 10%;
+  height: 10%;
+`
 
 export default function Home() {
   return (
@@ -25,7 +45,9 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero>
-        <Heading>GeoPursuit</Heading>
+        <Heading2>What group are you in?</Heading2>
+      <StyledButton><a>Group 1</a></StyledButton>
+        <Heading2>Introduction:</Heading2>
       </Hero>
     </>
   )
