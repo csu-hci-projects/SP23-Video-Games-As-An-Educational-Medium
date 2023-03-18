@@ -25,9 +25,10 @@ const Hero = styled.div`
   `
 
 const StyledButton = styled.button`
+  font-size: 15px;
+  font-weight: 20px;
   background-color: #2b3547;
   border-radius: 5px;
-  font-size: 10px;
   margin-left: 2%;
   margin-top: 4%;
   border-color: #2b3547;
@@ -47,7 +48,9 @@ export default function Home() {
       <Hero>
         <Heading2>What group are you in?</Heading2>
       <StyledButton><a>Group 1</a></StyledButton>
-        <Heading2>Introduction:</Heading2>
+      <StyledButton><a>Group 2</a></StyledButton>
+      <StyledButton><a>Group 3</a></StyledButton>
+        <Heading2>Introduction:{"\n"}</Heading2>
       </Hero>
     </>
   )
