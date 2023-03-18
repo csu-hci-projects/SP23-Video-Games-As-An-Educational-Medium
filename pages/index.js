@@ -21,6 +21,7 @@ const Hero = styled.div`
     font-weight: 500;
     margin-left: 3%;
     margin-top: 2%;
+    margin-bottom: 2%;
     display: block;
   `
 
@@ -34,6 +35,7 @@ const StyledButton = styled.button`
   border-color: #2b3547;
   width: 10%;
   height: 10%;
+  display: inline;
 `
 
 export default function Home() {
@@ -46,11 +48,14 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero>
-        <Heading2>What group are you in?</Heading2>
-      <StyledButton><a>Group 1</a></StyledButton>
-      <StyledButton><a>Group 2</a></StyledButton>
-      <StyledButton><a>Group 3</a></StyledButton>
-        <Heading2>Introduction:{"\n"}</Heading2>
+          <Heading2>What group are you in?</Heading2>
+        <main>
+          <StyledButton><a>Group 1</a></StyledButton>
+          <StyledButton><a>Group 2</a></StyledButton>
+          <StyledButton><a>Group 3</a></StyledButton>
+          <Heading2>Introduction:{"\n"}</Heading2>
+          <p>Within this project we are attempting to compare common teaching modailites in schools such as: reciprocal teaching and informative presentation with a teaching method that is used most commonly in video games, interactive tutorials.</p>
+        </main>
       </Hero>
     </>
   )
