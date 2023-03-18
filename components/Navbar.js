@@ -23,14 +23,19 @@ const StyledUl = styled.ul`
 	margin-top: 2%;
 	`
 
+const StyledDiv = styled.div`
+	margin-top: .75%;
+	font-size: 20px;
+`
+
 const Navbar = () => {
   return (
 	<Nav>
-		<div>	
+		<StyledDiv>	
 			<StyledLink href="/">
 				GeoPursuit
 			</StyledLink>
-		</div>
+		</StyledDiv>
 		<div>
 			<StyledUl>
 				<li>
@@ -39,13 +44,19 @@ const Navbar = () => {
 					</StyledLink>
 				</li>
 				<li>
-					<StyledLink href="/about">
-						About
+					<StyledLink href="/">
+						Experiment
 					</StyledLink>
 				</li>
 				<li>
+					<StyledLink href="/about">
+						About Us
+					</StyledLink>
+
+				</li>
+				<li>
 					<StyledLink href="/contact">
-						Contact
+						Contact Us
 					</StyledLink>
 				</li>
 			</StyledUl>
