@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 const FooterSection = styled.div`
-background: #000;
-color: #fff;
-height: 60px;
+background: #fff;
+color: #202733;
+height: 50px;
 display: flex;
 justify-content: center;
 align-items: center;`
