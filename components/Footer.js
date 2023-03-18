@@ -11,7 +11,7 @@ align-items: center;`
 const Footer = () => {
   return (
 	<FooterSection>
-		<p>Copyright 2023. All rights reserved.</p>
+		<p>Experiment Created for CS464 to Test Learning Modalities</p>
 	</FooterSection>
   )
 }
