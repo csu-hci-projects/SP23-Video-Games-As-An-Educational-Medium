@@ -8,17 +8,19 @@ const Nav = styled.nav`
 	color: #202733;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
 `
 
 const StyledLink = styled.a`
 	padding: 0rem 2rem;
 	color: #202733;
+	font-size: 20px;
+	margin-top: 2%;
 `
 
 const StyledUl = styled.ul`
 	list-style-type: none;
 	display: inline-flex;
+	margin-top: 2%;
 	`
 
 const Navbar = () => {
@@ -26,7 +28,7 @@ const Navbar = () => {
 	<Nav>
 		<div>	
 			<StyledLink href="/">
-				GEO
+				GeoPursuit
 			</StyledLink>
 		</div>
 		<div>
