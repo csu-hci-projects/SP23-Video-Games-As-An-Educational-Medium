@@ -8,7 +8,9 @@ const Hero = styled.div`
   display: flex;
   justify-content: start;
   align-items: flex-start;
-  background: #202733;`
+  background: #202733;
+  height: 100%;
+  `
 
   const Heading = styled.h1`
     color: #fff;
