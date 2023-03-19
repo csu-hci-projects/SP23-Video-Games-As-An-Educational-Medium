@@ -1,3 +1,22 @@
+import Head from 'next/head'
+import Image from 'next/image'
+import { Inter } from 'next/font/google'
+import styles from '@/styles/Home.module.css'
+import styled from 'styled-components'
+
+const Hero = styled.div`
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;`
+
+  const Heading = styled.h1`
+    color: #000;
+    font-size: 6rem;
+    font-weight: 900;`
+
+
 export default function Results() {
     return (
       <>
