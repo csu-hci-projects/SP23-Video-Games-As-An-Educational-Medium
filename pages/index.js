@@ -67,14 +67,24 @@ export default function Home() {
           <StyledButton><StyledLink href="/group2">Group 2</StyledLink></StyledButton>
           <StyledButton><StyledLink href="/group3">Group 3</StyledLink></StyledButton>
           <Heading2>Introduction:</Heading2>
-          <StyledText>Within this project we are attempting to compare common teaching modailites in schools such as: 
-            reciprocal teaching and informative presentation with a teaching method that is used most commonly in video 
-            games, interactive tutorials.</StyledText>
-
+          <StyledText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis laoreet arcu. Cras felis eros, malesuada
+            in porta eget, volutpat et metus. Suspendisse molestie purus quis velit facilisis vulputate. Vivamus dapibus, ex a facilisis
+            euismod, nunc dui malesuada dolor, a facilisis tellus erat ut justo. Fusce finibus ultrices arcu. In sed leo magna. Sed eu magna
+            nec ante imperdiet bibendum sed sed lorem.
+          </StyledText>
+          <br/>
           <StyledText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sem nisl, aliquet id scelerisque vitae, 
             dapibus in sem. Mauris bibendum faucibus sem eu tempor. Praesent vulputate est eu quam elementum, ut laoreet elit 
             mollis. Duis varius fermentum nibh eu facilisis. Mauris pharetra pulvinar convallis. Quisque consectetur lacus vitae
-            nisi vulputate vulputate. Integer lacus augue, commodo et enim ac, volutpat hendrerit enim. Vivamus bibendum efficitur consequat. </StyledText>
+            nisi vulputate vulputate. Integer lacus augue, commodo et enim ac, volutpat hendrerit enim. Vivamus bibendum efficitur consequat. 
+          </StyledText>
+          <br/>
+          <StyledText>
+          Duis laoreet dui sed libero tincidunt, eu porttitor felis faucibus. Aenean maximus quam non elementum pharetra. Sed bibendum condimentum
+          purus nec elementum. Mauris congue odio et consectetur tincidunt. Aliquam iaculis eget velit sit amet blandit. Vestibulum fringilla nibh
+          augue, sit amet laoreet elit blandit ac. Aenean mauris sem, aliquet viverra facilisis id, ullamcorper eu erat.
+          </StyledText>
+          <br/>
         </main>
       </Hero>
     </>
