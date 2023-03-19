@@ -44,7 +44,7 @@ const Navbar = () => {
 					</StyledLink>
 				</li>
 				<li>
-					<StyledLink href="/">
+					<StyledLink href="/experiment">
 						Experiment
 					</StyledLink>
 				</li>
