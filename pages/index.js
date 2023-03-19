@@ -45,6 +45,12 @@ const StyledText = styled.p`
 
 `
 
+const StyledLink = styled.a`
+	padding: 0rem 2rem;
+	color: #fff;
+	font-size: 20px;
+`
+
 export default function Home() {
   return (
     <>
@@ -57,11 +63,18 @@ export default function Home() {
       <Hero>
         <main>
           <Heading2>What group are you in?</Heading2>
-          <StyledButton><a>Group 1</a></StyledButton>
-          <StyledButton><a>Group 2</a></StyledButton>
-          <StyledButton><a>Group 3</a></StyledButton>
+          <StyledButton><StyledLink href="/group1">Group 1</StyledLink></StyledButton>
+          <StyledButton><StyledLink href="/group2">Group 2</StyledLink></StyledButton>
+          <StyledButton><StyledLink href="/group3">Group 3</StyledLink></StyledButton>
           <Heading2>Introduction:</Heading2>
-          <StyledText>Within this project we are attempting to compare common teaching modailites in schools such as: reciprocal teaching and informative presentation with a teaching method that is used most commonly in video games, interactive tutorials.</StyledText>
+          <StyledText>Within this project we are attempting to compare common teaching modailites in schools such as: 
+            reciprocal teaching and informative presentation with a teaching method that is used most commonly in video 
+            games, interactive tutorials.</StyledText>
+
+          <StyledText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sem nisl, aliquet id scelerisque vitae, 
+            dapibus in sem. Mauris bibendum faucibus sem eu tempor. Praesent vulputate est eu quam elementum, ut laoreet elit 
+            mollis. Duis varius fermentum nibh eu facilisis. Mauris pharetra pulvinar convallis. Quisque consectetur lacus vitae
+            nisi vulputate vulputate. Integer lacus augue, commodo et enim ac, volutpat hendrerit enim. Vivamus bibendum efficitur consequat. </StyledText>
         </main>
       </Hero>
     </>
