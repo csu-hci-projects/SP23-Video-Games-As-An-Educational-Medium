@@ -17,7 +17,7 @@ const Hero = styled.div`
 
   const Heading2 = styled.h2`
     color: #fff;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 500;
     margin-left: 3%;
     margin-top: 2%;
@@ -30,12 +30,19 @@ const StyledButton = styled.button`
   font-weight: 20px;
   background-color: #2b3547;
   border-radius: 5px;
-  margin-left: 2%;
-  margin-top: 4%;
+  margin-left: 4%;
+  margin-top: 1%;
   border-color: #2b3547;
-  width: 10%;
-  height: 10%;
+  width: 12%;
+  height: 60px;
   display: inline;
+`
+
+const StyledText = styled.p`
+  margin-left: 3%;
+  font-size: 20px;
+  max-width: 80%;
+
 `
 
 export default function Home() {
@@ -48,13 +55,13 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero>
-          <Heading2>What group are you in?</Heading2>
         <main>
+          <Heading2>What group are you in?</Heading2>
           <StyledButton><a>Group 1</a></StyledButton>
           <StyledButton><a>Group 2</a></StyledButton>
           <StyledButton><a>Group 3</a></StyledButton>
-          <Heading2>Introduction:{"\n"}</Heading2>
-          <p>Within this project we are attempting to compare common teaching modailites in schools such as: reciprocal teaching and informative presentation with a teaching method that is used most commonly in video games, interactive tutorials.</p>
+          <Heading2>Introduction:</Heading2>
+          <StyledText>Within this project we are attempting to compare common teaching modailites in schools such as: reciprocal teaching and informative presentation with a teaching method that is used most commonly in video games, interactive tutorials.</StyledText>
         </main>
       </Hero>
     </>
