@@ -59,6 +59,11 @@ const Navbar = () => {
 						Contact Us
 					</StyledLink>
 				</li>
+				<li>
+					<StyledLink href="/game">
+						Game (dev purposes)
+					</StyledLink>
+				</li>
 			</StyledUl>
 		</div>
 	</Nav>
