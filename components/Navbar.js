@@ -3,39 +3,37 @@ import styled from 'styled-components';
 import Link from 'next/link';
 
 const Nav = styled.nav`
-	height: 40px;
+	height: 70px;
 	background: #fff;
 	color: #202733;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	font-size: 1em;
 `
 
 const StyledLink = styled.a`
 	padding: 0rem 2rem;
-	color: #202733;
-	font-size: 20px;
-	margin-top: 2%;
-`
+	color: #202733;`
 
 const StyledUl = styled.ul`
 	list-style-type: none;
 	display: inline-flex;
-	margin-top: 2%;
 	`
 
-const StyledDiv = styled.div`
-	margin-top: .75%;
-	font-size: 20px;
+const LogoDiv = styled.div`
+	font-size: 1.5em;
+	font-weight: 800;
 `
 
 const Navbar = () => {
   return (
 	<Nav>
-		<StyledDiv>	
+		<LogoDiv>	
 			<StyledLink href="/">
 				GeoPursuit
 			</StyledLink>
-		</StyledDiv>
+		</LogoDiv>
 		<div>
 			<StyledUl>
 				<li>

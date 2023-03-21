@@ -3,54 +3,78 @@ import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import styled from 'styled-components'
 
+
 const Hero = styled.div`
   height: 80vh;
   display: flex;
   justify-content: start;
-  align-items: flex-start;
-  background: #202733;
-  height: 100%;
+  align-items: center;
+  padding: 2rem;
+  z-index: 100;
+  background: url('./herobg.jpeg') no-repeat center center;
+  background-size: cover;
   `
 
-  const Heading = styled.h1`
-    color: #fff;
-    font-size: 6rem;
-    font-weight: 900;`
+const Heading1 = styled.h1`
+  color: #fff;
+  font-size: 4em;
+  font-weight: 900;
+  margin-bottom: 2rem;`
 
-  const Heading2 = styled.h2`
-    color: #fff;
-    font-size: 40px;
-    font-weight: 500;
-    margin-left: 3%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    display: block;
-  `
+const Heading2 = styled.h2`
+  color: #fff;
+  font-size: 2em;
+  font-weight: 500;
+  margin-bottom: 2rem;
+`
 
-const StyledButton = styled.button`
-  font-size: 15px;
-  font-weight: 20px;
-  background-color: #2b3547;
-  border-radius: 5px;
-  margin-left: 4%;
-  margin-top: 1%;
-  border-color: #2b3547;
-  width: 12%;
+const HeroButton = styled.button`
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background-color: rgba(0,0,0,0.0);
+  border-radius: 100px;
+  border: 3px solid #40F2FE;
+  margin-right: 2em;
+  margin-top: 1em;
   height: 60px;
-  display: inline;
+  width: 200px;
+  transition: all .3s;
+  box-shadow: 0px 0px 20px rgba(202,152,254,0.5);
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 0px 20px rgba(202,152,254,1);
+  }
 `
 
 const StyledText = styled.p`
-  margin-left: 3%;
-  font-size: 20px;
-  max-width: 80%;
-
 `
 
 const StyledLink = styled.a`
 	padding: 0rem 2rem;
-	color: #fff;
-	font-size: 20px;
+	color: #E6E1FC;
+`
+
+const HeroCol = styled.div`
+  padding: 1rem;
+`
+
+const DivLeft = styled(HeroCol)`
+`
+
+const DivRight = styled(HeroCol)`
+  
+`
+
+const ColWrapper = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+`
+
+const Col = styled.div`
 `
 
 export default function Home() {
@@ -63,31 +87,47 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero>
-        <main>
-          <Heading2>What group are you in?</Heading2>
-          <StyledButton><StyledLink href="/group1">Group 1</StyledLink></StyledButton>
-          <StyledButton><StyledLink href="/group2">Group 2</StyledLink></StyledButton>
-          <Heading2>Introduction:</Heading2>
-          <StyledText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis laoreet arcu. Cras felis eros, malesuada
-            in porta eget, volutpat et metus. Suspendisse molestie purus quis velit facilisis vulputate. Vivamus dapibus, ex a facilisis
-            euismod, nunc dui malesuada dolor, a facilisis tellus erat ut justo. Fusce finibus ultrices arcu. In sed leo magna. Sed eu magna
-            nec ante imperdiet bibendum sed sed lorem.
-          </StyledText>
-          <br/>
-          <StyledText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sem nisl, aliquet id scelerisque vitae, 
-            dapibus in sem. Mauris bibendum faucibus sem eu tempor. Praesent vulputate est eu quam elementum, ut laoreet elit 
-            mollis. Duis varius fermentum nibh eu facilisis. Mauris pharetra pulvinar convallis. Quisque consectetur lacus vitae
-            nisi vulputate vulputate. Integer lacus augue, commodo et enim ac, volutpat hendrerit enim. Vivamus bibendum efficitur consequat. 
-          </StyledText>
-          <br/>
-          <StyledText>
-          Duis laoreet dui sed libero tincidunt, eu porttitor felis faucibus. Aenean maximus quam non elementum pharetra. Sed bibendum condimentum
-          purus nec elementum. Mauris congue odio et consectetur tincidunt. Aliquam iaculis eget velit sit amet blandit. Vestibulum fringilla nibh
-          augue, sit amet laoreet elit blandit ac. Aenean mauris sem, aliquet viverra facilisis id, ullamcorper eu erat.
-          </StyledText>
-          <br/>
-        </main>
+        <header>
+          <DivLeft className={styles.cols}>
+            <Heading1>Video games as an educational medium.</Heading1>
+            <Heading2>What group are you in?</Heading2>
+            <ColWrapper className={styles.colWrapper}>
+              <HeroButton><StyledLink href="/group1">Group 1</StyledLink></HeroButton>
+              <HeroButton><StyledLink href="/group2">Group 2</StyledLink></HeroButton>
+            </ColWrapper>
+          </DivLeft>
+        </header>
       </Hero>
+          <main className={styles.main}>
+            <ColWrapper className={styles.colWrapper}>
+              <DivLeft className={styles.cols}>
+                <div style={{width: 500, height: 200}}>
+                  Image placeholder
+                </div>
+              </DivLeft>
+              <DivRight className={styles.cols}>
+                <Heading2>Introduction:</Heading2>
+                <StyledText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis laoreet arcu. Cras felis eros, malesuada
+                  in porta eget, volutpat et metus. Suspendisse molestie purus quis velit facilisis vulputate. Vivamus dapibus, ex a facilisis
+                  euismod, nunc dui malesuada dolor, a facilisis tellus erat ut justo. Fusce finibus ultrices arcu. In sed leo magna. Sed eu magna
+                  nec ante imperdiet bibendum sed sed lorem.
+                </StyledText>
+                <br/>
+                <StyledText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sem nisl, aliquet id scelerisque vitae, 
+                  dapibus in sem. Mauris bibendum faucibus sem eu tempor. Praesent vulputate est eu quam elementum, ut laoreet elit 
+                  mollis. Duis varius fermentum nibh eu facilisis. Mauris pharetra pulvinar convallis. Quisque consectetur lacus vitae
+                  nisi vulputate vulputate. Integer lacus augue, commodo et enim ac, volutpat hendrerit enim. Vivamus bibendum efficitur consequat. 
+                </StyledText>
+                <br/>
+                <StyledText>
+                Duis laoreet dui sed libero tincidunt, eu porttitor felis faucibus. Aenean maximus quam non elementum pharetra. Sed bibendum condimentum
+                purus nec elementum. Mauris congue odio et consectetur tincidunt. Aliquam iaculis eget velit sit amet blandit. Vestibulum fringilla nibh
+                augue, sit amet laoreet elit blandit ac. Aenean mauris sem, aliquet viverra facilisis id, ullamcorper eu erat.
+                </StyledText>
+              </DivRight>
+            </ColWrapper>
+            <br/>
+        </main>
     </>
   )
 }
