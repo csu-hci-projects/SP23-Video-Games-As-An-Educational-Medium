@@ -42,8 +42,8 @@ const mapOptions = {
 		mapData: mapDataAfrica,
 		name: 'Africa',
 		data: data,
-		borderColor: 'white',
-		borderWidth: 3,
+		borderColor: '#202733',
+		borderWidth: 1,
 	  }
 	]
   };
@@ -51,11 +51,13 @@ const mapOptions = {
 export default function Game({ Component, pageProps }) {
 	return (
 		<main className={styles.main}>
-			<HighchartsReact
-				options={mapOptions}
-				constructorType={'mapChart'}
-				highcharts={Highcharts}
-        	/>
+			<div className={styles.container}>
+				<HighchartsReact
+					options={mapOptions}
+					constructorType={'mapChart'}
+					highcharts={Highcharts}
+				/>
+			</div>
 		</main>
   	)
 }
