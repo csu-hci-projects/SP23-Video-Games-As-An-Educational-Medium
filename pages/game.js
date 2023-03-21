@@ -6,7 +6,7 @@ import samImg from "public/SamMcKay.jpg";
 import Dropdown from "/components/Dropdown";
 
 const Hero = styled.div`
-  height: 80vh;
+  height: 50vh;
   display: flex;
   justify-content: start;
   align-items: flex-start;
@@ -76,7 +76,7 @@ export default function Home() {
       <Hero>
         <StyledImage src = "/Outlines/Algeria.png"/>
       </Hero>
-      <Hero>
+      <Hero style={{height: "10vh"}}>
         <Dropdown isSearchable placeHolder="Select..." options={options}/>
       </Hero>
       <Hero>
