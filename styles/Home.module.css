@@ -1,21 +1,36 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   padding: 6rem;
-  min-height: 100vh;
+  font-size: 1.2em;
 }
+.heroBg {
+  z-index: -1;
+  object-fit: cover;
+  object-position: right;
+}
+
+.cols {
+  max-width: 100vw;
+}
+
+.colWrapper {
+  flex-direction: column;
+}
+
+.reverse {
+  flex-direction: column-reverse;
+}
+
 
 .description {
   display: inherit;
   justify-content: inherit;
   align-items: inherit;
-  font-size: 0.85rem;
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
-  font-family: var(--font-mono);
 }
 
 .description a {
@@ -274,5 +289,17 @@
   }
   to {
     transform: rotate(0deg);
+  }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 768px) {
+  .cols {
+    max-width: 50vw;
+  }
+
+  .colWrapper {
+    flex-direction: row;
   }
 }
