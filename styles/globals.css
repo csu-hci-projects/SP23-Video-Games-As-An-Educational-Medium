@@ -148,7 +148,6 @@ button:hover {
   cursor: pointer;
   background-color: #fff;
   color: #000;
-  width: 20%;
 }
 
 .dropdown-item:hover {
