@@ -49,17 +49,6 @@ const Navbar = () => {
 					</StyledLink>
 				</li>
 				<li>
-					<StyledLink href="/about">
-						About Us
-					</StyledLink>
-
-				</li>
-				<li>
-					<StyledLink href="/contact">
-						Contact Us
-					</StyledLink>
-				</li>
-				<li>
 					<StyledLink href="/game">
 						Game (dev purposes)
 					</StyledLink>
