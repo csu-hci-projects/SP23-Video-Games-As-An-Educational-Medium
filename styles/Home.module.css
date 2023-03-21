@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   padding: 6rem;
+  font-size: 1.2em;
 }
 .heroBg {
   z-index: -1;
