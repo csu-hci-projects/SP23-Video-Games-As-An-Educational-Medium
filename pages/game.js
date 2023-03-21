@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import samImg from "public/SamMcKay.jpg";
 import Dropdown from "/components/Dropdown";
 
+
 const Hero = styled.div`
   height: 50vh;
   display: flex;
