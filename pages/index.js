@@ -67,7 +67,6 @@ export default function Home() {
           <Heading2>What group are you in?</Heading2>
           <StyledButton><StyledLink href="/group1">Group 1</StyledLink></StyledButton>
           <StyledButton><StyledLink href="/group2">Group 2</StyledLink></StyledButton>
-          <StyledButton><StyledLink href="/group3">Group 3</StyledLink></StyledButton>
           <Heading2>Introduction:</Heading2>
           <StyledText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis laoreet arcu. Cras felis eros, malesuada
             in porta eget, volutpat et metus. Suspendisse molestie purus quis velit facilisis vulputate. Vivamus dapibus, ex a facilisis
