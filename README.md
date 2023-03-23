@@ -2,7 +2,7 @@
 
 ## Group members: Jordan Rust, Jenelle Dobyns, Sam McKay, Bailey Hust
 
-### Team member contributions:
+## Team member contributions:
 #### Jordan Rust: 
 - Created all of the outlines we have thus far which will be used for both the presentation and the test.
 - Helped team member Bailey Hust in constructing the draft of the research paper.
@@ -22,7 +22,33 @@
 - Constructed the basis of the landing page that will welcome participants when we start the trials.
 - Created the front-end of the testing page which will be used after participants have completed their respective educational materials.
 - Created the Experiment page on the website that provides more in depth information regarding the experiment.
-    
+
+
+## Future Distribution of Work:
+#### Jordan Rust:
+- Continue working on the paper, updating sections as needed.
+- Construct more silohouettes for the countries that will be present in the powerpoint and test
+- Help team member Bailey Hust create a script that will be read during the presentation for group 2
+
+#### Bailey Hust:
+- Continue working on the paper, updating sections as needed.
+- Continue working on the powerpoint presentation that will be used to educate group 2
+- Help team member Jordan Rust create a script that will be read during the presentation for group 2
+
+#### Jenelle Dobyns:
+- Alter the styling and CSS aspects of the React application for readibility and usability
+- Add working image extensions to sections of the website that need them
+- Create the Group 2 page that will contain the video of the presentation
+- Create a back-end using the JavaScript libraries she has found
+
+#### Sam McKay:
+- Continue working on the testing page for the groups
+- Create the Group 1 page that will contain the interactive map
+- Help team member Jenlle Dobyns create a back-end using the JavaScript libraries she has found
+- Create the results page that our team will use to analyze the scores of the participants, which will be used in statistical analysis
+
+## Meetings:
+   Currently we have been meeting at least once a week to ensure that the project is heading in the direction that we want and that aspects of the experiment are being completed in a timely manner
 
 
 ## General:
