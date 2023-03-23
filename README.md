@@ -1,38 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Video Games as an Educational Medium
 
-## Getting Started
+## Group members: Jordan Rust, Jenelle Dobyns, Sam McKay, Bailey Hust
 
-First, run the development server:
+### Team member contributions:
+#### Jordan Rust: 
+- Created all of the outlines we have thus far which will be used for both the presentation and the test.
+- Helped team member Bailey Hust in constructing the draft of the research paper.
+- Contributed to the growing list of related works.
+    
+#### Bailey Hust:
+- Created the powerpoint slides that will be presented to group 2 when testing begins
+- Helped team member Jordan Rust in constructing the draft of the research paper.
+- Contributed to the growing list of related works.
+   
+#### Jenelle Dobyns:
+- Created the basis of the React application that will be used throughout all aspects of the experiment.
+- Modified several aspects of the website to ensure ease of use for participants.
+- Researched JavaScript libraries that will be helpful in creating the test presented to participants.
+    
+#### Sam McKay:
+- Constructed the basis of the landing page that will welcome participants when we start the trials.
+- Created the front-end of the testing page which will be used after participants have completed their respective educational materials.
+- Created the Experiment page on the website that provides more in depth information regarding the experiment.
+    
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## General:
+   Our experiment will be testing if there is a statistically significant difference between two forms of education: Powerpoint presentations or interactive learning. Upon gathering our participants they will be put into one of two groups. The first group will be given an interactive map where they can scroll around and click on countries in Africa to recieve information about that country including the shape of the contry itself. The other group will be presented with a prerecorded lecture where one of our group members will read from a script and present slides that contain the same amount of information as the interactive map. Once the participants are done with their respective educational medium they will be directed to a test where they are shown a silhouette of a country they previously learned about and will have to attempt to name the country. After they have taken the test there will be a rest period of a couple of days and then they will be tested again to see if their scores have changed. After this twe will comapre the test results of both groups and perform statistical analysis to determine if there is a quantifiable difference between the two forms of education. The video to the prototype is listed below.
+  
+  https://youtu.be/3CWSdlZK3kA
