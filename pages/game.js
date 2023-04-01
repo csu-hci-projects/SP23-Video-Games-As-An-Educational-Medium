@@ -42,9 +42,6 @@ const StyledImage = styled.img`
   margin-left: 42%;
   display: block;
 `
-const CountryImages = [
-  "https://i.imgur.com/ciapi9a.png", "https://i.imgur.com/ZGe8qpm.png", "https://i.imgur.com/xRQBZCF.png", "https://i.imgur.com/VSY7UGC.png", "https://i.imgur.com/antwu0T.png", "https://i.imgur.com/OeedMq1.png", "https://i.imgur.com/gB8g5Pe.png", "https://i.imgur.com/gFDdANR.png", "https://i.imgur.com/9ma69QZ.png", "https://i.imgur.com/Fv9Oy8T.png", "https://i.imgur.com/nPHeogp.png", "https://i.imgur.com/JGKu4l4.png", "https://i.imgur.com/AafZLgR.png", "https://i.imgur.com/UpQ4C6M.png", "https://i.imgur.com/rwbGZTF.png", "https://i.imgur.com/kb4q4Yx.png", "https://i.imgur.com/FoZ4ANh.png"
-]
 
 
 const options = [
@@ -68,8 +65,11 @@ const options = [
 ]
 
 export default function Home() {
-  let i = Math.random() * (16 - 0) + 0;
-  const [imageSrc, setImageSrc] = useState(encodeURIComponent(CountryImages[i]));
+  var CountryImages = [
+    "https://i.imgur.com/ciapi9a.png", "https://i.imgur.com/ZGe8qpm.png", "https://i.imgur.com/xRQBZCF.png", "https://i.imgur.com/VSY7UGC.png", "https://i.imgur.com/antwu0T.png", "https://i.imgur.com/OeedMq1.png\"", "https://i.imgur.com/gB8g5Pe.png", "https://i.imgur.com/gFDdANR.png", "https://i.imgur.com/9ma69QZ.png", "https://i.imgur.com/Fv9Oy8T.png", "https://i.imgur.com/nPHeogp.png", "https://i.imgur.com/JGKu4l4.png", "https://i.imgur.com/AafZLgR.png", "https://i.imgur.com/UpQ4C6M.png", "https://i.imgur.com/rwbGZTF.png", "https://i.imgur.com/kb4q4Yx.png", "https://i.imgur.com/FoZ4ANh.png"
+  ]
+  let i = Math.floor(Math.random() * (16 - 0) + 0);
+  const [imageSrc, setImageSrc] = useState(CountryImages[i]);
 
   const handleClick = () => {
     i = Math.random() * (16 - 0) + 0;
