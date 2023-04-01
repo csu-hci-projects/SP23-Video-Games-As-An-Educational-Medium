@@ -4,7 +4,8 @@ import styles from '@/styles/Home.module.css';
 import styled from 'styled-components';
 import samImg from "public/SamMcKay.jpg";
 import Dropdown from "/components/Dropdown";
-
+import React, {useState} from 'react';
+import algeria from "../Outlines/Algeria.png";
 
 const Hero = styled.div`
   height: 50vh;
@@ -35,12 +36,16 @@ const StyledText = styled.p`
 const StyledImage = styled.img`
   height: 200px;
   width: 250px;
-  margin-top: 5%;
+  margin-top: 10%;
   margin-bottom: 2%;
   postion: static;
-  margin-left: 40%;
+  margin-left: 42%;
   display: block;
 `
+const CountryImages = [
+  "https://i.imgur.com/ciapi9a.png", "https://i.imgur.com/ZGe8qpm.png", "https://i.imgur.com/xRQBZCF.png", "https://i.imgur.com/VSY7UGC.png", "https://i.imgur.com/antwu0T.png", "https://i.imgur.com/OeedMq1.png", "https://i.imgur.com/gB8g5Pe.png", "https://i.imgur.com/gFDdANR.png", "https://i.imgur.com/9ma69QZ.png", "https://i.imgur.com/Fv9Oy8T.png", "https://i.imgur.com/nPHeogp.png", "https://i.imgur.com/JGKu4l4.png", "https://i.imgur.com/AafZLgR.png", "https://i.imgur.com/UpQ4C6M.png", "https://i.imgur.com/rwbGZTF.png", "https://i.imgur.com/kb4q4Yx.png", "https://i.imgur.com/FoZ4ANh.png"
+]
+
 
 const options = [
   { value: "Algeria", label: "Algeria" }, 
@@ -48,24 +53,29 @@ const options = [
   { value: "Benin", label: "Benin"},
   { value: "Botswana", label: "Botswana"},
   { value: "Burkina Faso", label: "Burkina Faso"},
-  { value: "Burundi", label: "Burundi"},
-  { value: "Cameroon", label: "Cameroon"},
-  { value: "Cabo Verde", label: "Cabo Verde"},
+  { value: "Cape Verde", label: "Cape Verde"},
   { value: "Central African Republic", label: "Central African Republic"},
   { value: "Chad", label: "Chad"},
   { value: "Comoros", label: "Comoros"},
-  { value: "Côte dIvoire", label: "Côte dIvoire"},
-  { value: "Democratic Republic of the Congo", label: "Democratic Republic of the Congo"},
   { value: "Djibouti", label: "Djibouti"},
+  { value: "Democratic Republic of the Congo", label: "Democratic Republic of the Congo"},
   { value: "Egypt", label: "Egypt"},
   { value: "Equatorial Guinea", label: "Equatorial Guinea"},
   { value: "Eritrea", label: "Eritrea"},
-  { value: "Eswatini", label: "Eswatini"},
-  { value: "Ethiopia", label: "Ethiopia"},
-
+  { value: "Ivory Coast", label: "Ivory Coast"},
+  { value: "Mali", label: "Mali"},
+  { value: "Sao Tome and Principe", label: "Sao Tome and Principe"}
 ]
 
 export default function Home() {
+  let i = Math.random() * (16 - 0) + 0;
+  const [imageSrc, setImageSrc] = useState(encodeURIComponent(CountryImages[i]));
+
+  const handleClick = () => {
+    i = Math.random() * (16 - 0) + 0;
+    setImageSrc(CountryImages[i]);
+  };
+
   return (
     <>
       <Head>
@@ -75,14 +85,14 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero>
-        <StyledImage src = "/Outlines/Algeria.png"/>
+        <StyledImage src={imageSrc} alt="example"/>
       </Hero>
       <Hero style={{height: "10vh"}}>
         <Dropdown isSearchable placeHolder="Select..." options={options}/>
       </Hero>
       <Hero>
-        <StyledButton><StyledText>Submit Answer</StyledText></StyledButton>
+        <StyledButton onClick={handleClick}><StyledText>Submit Answer</StyledText></StyledButton>
       </Hero>
     </>
-  )
+  );
 }
