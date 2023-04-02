@@ -26,20 +26,31 @@ const Text = styled.h3`
   font-size: 2rem;
 `
 
+const Answers = styled.h4`
+  color: #fff;
+  font-weight: 500;
+  margin-top: 6%;
+  margin-left: 15%;
+  font-size: 1.5rem;
+`
+
 
 export default function Results() {
   const [TestTime, setTestTime] = useState('');
   const [score, setScore] = useState('');
+  const [choices, setChoices] = useState('');
 
   
   useEffect(() => {
     const time = window.localStorage.getItem('userTime');
     const score = window.localStorage.getItem('userScore');
+    const answers = window.localStorage.getItem('userChoices');
     const count = score.split('true').length-1;
     const result = count / 17;
 
     setTestTime(time);
     setScore((result*100).toFixed(2));
+    setChoices(answers);
   }, []);
 
     return (
@@ -53,7 +64,9 @@ export default function Results() {
           <Heading>Results</Heading>
           <Text>Participant Completion Time: {TestTime} Seconds</Text>
           <Text>Percentage Correct: {score}%</Text>
-          <Text>Countries:</Text>
+          <Text>Answer Comparison:</Text>
+          <Answers>{choices}</Answers>
+
 
       </>
     )
