@@ -42,23 +42,23 @@ const StyledImage = styled.img`
 
 
 const options = [
-  { value: "Algeria", label: "Algeria" }, 
-  { value: "Angola", label: "Angola"},
-  { value: "Benin", label: "Benin"},
-  { value: "Botswana", label: "Botswana"},
-  { value: "Burkina Faso", label: "Burkina Faso"},
-  { value: "Cape Verde", label: "Cape Verde"},
-  { value: "Central African Republic", label: "Central African Republic"},
-  { value: "Chad", label: "Chad"},
-  { value: "Comoros", label: "Comoros"},
-  { value: "Djibouti", label: "Djibouti"},
-  { value: "Democratic Republic of the Congo", label: "Democratic Republic of the Congo"},
-  { value: "Egypt", label: "Egypt"},
-  { value: "Equatorial Guinea", label: "Equatorial Guinea"},
-  { value: "Eritrea", label: "Eritrea"},
-  { value: "Ivory Coast", label: "Ivory Coast"},
-  { value: "Mali", label: "Mali"},
-  { value: "Sao Tome and Principe", label: "Sao Tome and Principe"}
+  { value: " Algeria", label: "Algeria" }, 
+  { value: " Angola", label: "Angola"},
+  { value: " Benin", label: "Benin"},
+  { value: " Botswana", label: "Botswana"},
+  { value: " Burkina Faso", label: "Burkina Faso"},
+  { value: " Cape Verde", label: "Cape Verde"},
+  { value: " Central African Republic", label: "Central African Republic"},
+  { value: " Chad", label: "Chad"},
+  { value: " Comoros", label: "Comoros"},
+  { value: " Djibouti", label: "Djibouti"},
+  { value: " Democratic Republic of the Congo", label: "Democratic Republic of the Congo"},
+  { value: " Egypt", label: "Egypt"},
+  { value: " Equatorial Guinea", label: "Equatorial Guinea"},
+  { value: " Eritrea", label: "Eritrea"},
+  { value: " Ivory Coast", label: "Ivory Coast"},
+  { value: " Mali", label: "Mali"},
+  { value: " Sao Tome and Principe", label: "Sao Tome and Principe"}
 ]
 
 const countryOrder = ["Mali", "Chad", "Burkina", "Eritrea", "Central African Republic", "Angola", "Benin", "Cape Verde", "Democratic Republic of Congo", "Botswana", "Ivory Coast", "Algeria", "Egypt", "Equatorial Guinea", "Comoros", "Sao Tome", "Djibouti"];
