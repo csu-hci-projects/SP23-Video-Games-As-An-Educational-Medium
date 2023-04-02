@@ -3,9 +3,10 @@ import Image from 'next/image';
 import styles from '@/styles/Home.module.css';
 import styled from 'styled-components';
 import samImg from "public/SamMcKay.jpg";
-import Dropdown from "/components/Dropdown";
 import React, {useState} from 'react';
 import algeria from "../Outlines/Algeria.png";
+import Dropdown from '@/components/Dropdown';
+
 
 const Hero = styled.div`
   height: 50vh;
@@ -64,16 +65,44 @@ const options = [
   { value: "Sao Tome and Principe", label: "Sao Tome and Principe"}
 ]
 
+const countryOrder = ["Mali", "Chad", "Burkina", "Eritrea", "Central African Republic", "Angola", "Benin", "Cape Verde", "Democratic Republic of Congo", "Botswana", "Ivory Coast", "Algeria", "Egypt", "Equatorial Guinea", "Comoros", "Sao Tome", "Djibouti"];
+
+let userScore = [];
+
+let i = 0;
 export default function Home() {
+  console.log(userScore);
+
   var CountryImages = [
-    "https://i.imgur.com/ciapi9a.png", "https://i.imgur.com/ZGe8qpm.png", "https://i.imgur.com/xRQBZCF.png", "https://i.imgur.com/VSY7UGC.png", "https://i.imgur.com/antwu0T.png", "https://i.imgur.com/OeedMq1.png\"", "https://i.imgur.com/gB8g5Pe.png", "https://i.imgur.com/gFDdANR.png", "https://i.imgur.com/9ma69QZ.png", "https://i.imgur.com/Fv9Oy8T.png", "https://i.imgur.com/nPHeogp.png", "https://i.imgur.com/JGKu4l4.png", "https://i.imgur.com/AafZLgR.png", "https://i.imgur.com/UpQ4C6M.png", "https://i.imgur.com/rwbGZTF.png", "https://i.imgur.com/kb4q4Yx.png", "https://i.imgur.com/FoZ4ANh.png"
+    "https://i.imgur.com/kb4q4Yx.png",
+    "https://i.imgur.com/gFDdANR.png",
+    "https://i.imgur.com/antwu0T.png",
+    "https://i.imgur.com/UpQ4C6M.png",
+    "https://i.imgur.com/gB8g5Pe.png",
+    "https://i.imgur.com/ZGe8qpm.png",
+    "https://i.imgur.com/xRQBZCF.png",
+    "https://i.imgur.com/OeedMq1.png",
+    "https://i.imgur.com/nPHeogp.png",
+    "https://i.imgur.com/VSY7UGC.png",
+    "https://i.imgur.com/rwbGZTF.png",
+    "https://i.imgur.com/ciapi9a.png",
+    "https://i.imgur.com/JGKu4l4.png",
+    "https://i.imgur.com/AafZLgR.png",
+    "https://i.imgur.com/9ma69QZ.png",
+    "https://i.imgur.com/FoZ4ANh.png",
+    "https://i.imgur.com/Fv9Oy8T.png"
   ]
-  let i = Math.floor(Math.random() * (16 - 0) + 0);
-  const [imageSrc, setImageSrc] = useState(CountryImages[i]);
+  const [imageSrc, setImageSrc] = useState(CountryImages[0]);
 
   const handleClick = () => {
-    i = Math.random() * (16 - 0) + 0;
+    i+=1;
     setImageSrc(CountryImages[i]);
+    console.log(document.getElementById("droppy"));
+    if (getSelectedValue == countryOrder[i]) {
+      userScore.push(true);
+    } else {
+      userScore.push(false);
+    }
   };
 
   return (
@@ -88,11 +117,12 @@ export default function Home() {
         <StyledImage src={imageSrc} alt="example"/>
       </Hero>
       <Hero style={{height: "10vh"}}>
-        <Dropdown isSearchable placeHolder="Select..." options={options}/>
+        <Dropdown id="droppy" isSearchable placeHolder="Select A Country" options={options}/>
       </Hero>
       <Hero>
         <StyledButton onClick={handleClick}><StyledText>Submit Answer</StyledText></StyledButton>
       </Hero>
     </>
+
   );
 }
