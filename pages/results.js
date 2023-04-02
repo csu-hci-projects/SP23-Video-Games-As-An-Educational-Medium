@@ -17,6 +17,11 @@ const Hero = styled.div`
     font-weight: 900;`
 
 
+var TestTime;
+if (typeof window !== 'undefined') {
+  TestTime = window.localStorage.getItem("userTime");
+}
+
 export default function Results() {
     return (
       <>
@@ -28,6 +33,9 @@ export default function Results() {
         </Head>
         <Hero>
           <Heading>Results</Heading>
+          <main>
+            <p>fhdsjakfhdsa</p>
+          </main>
         </Hero>
       </>
     )
