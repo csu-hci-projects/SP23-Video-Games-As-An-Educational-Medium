@@ -1,12 +1,8 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import styles from '@/styles/Home.module.css';
 import styled from 'styled-components';
-import samImg from "public/SamMcKay.jpg";
-import React, {useRef, useState} from 'react';
-import algeria from "../Outlines/Algeria.png";
+import React, {useState, useEffect} from 'react';
 import Dropdown from '@/components/Dropdown';
-import {e} from "../components/Dropdown"
+import {e} from "../components/Dropdown";
 
 const Hero = styled.div`
   height: 50vh;
@@ -70,8 +66,9 @@ const countryOrder = ["Mali", "Chad", "Burkina", "Eritrea", "Central African Rep
 let userScore = [];
 
 let i = 0;
-export default function Home() {
-  const ref = React.createRef();
+export default function Game() {
+  const [timeOnPage, setTimeOnPage] = useState(0);
+
   var CountryImages = [
     "https://i.imgur.com/kb4q4Yx.png",
     "https://i.imgur.com/gFDdANR.png",
@@ -93,6 +90,16 @@ export default function Home() {
   ]
   const [imageSrc, setImageSrc] = useState(CountryImages[0]);
 
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setTimeOnPage(timeOnPage => timeOnPage + 1);
+    }, 1000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
+
 
   const handleClick = () => {
     i+=1;
@@ -103,8 +110,13 @@ export default function Home() {
     } else {
       userScore.push(false);
     }
-
     
+    if (i == 17) {
+      if (typeof window !== 'undefined') {
+        window.localStorage.setItem("userTime", timeOnPage);
+        window.location.href = "/results";
+      }
+    }
   };
 
   return (
@@ -119,7 +131,7 @@ export default function Home() {
         <StyledImage src={imageSrc} alt="example"/>
       </Hero>
       <Hero style={{height: "10vh"}}>
-        <Dropdown id = "droppy" isSearchable placeHolder="Select A Country" options={options}/>
+        <Dropdown isSearchable placeHolder="Select A Country" options={options}/>
       </Hero>
       <Hero>
         <StyledButton onClick={handleClick}><StyledText>Submit Answer</StyledText></StyledButton>
