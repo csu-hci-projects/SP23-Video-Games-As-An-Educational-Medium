@@ -64,6 +64,7 @@ const options = [
 const countryOrder = ["Mali", "Chad", "Burkina", "Eritrea", "Central African Republic", "Angola", "Benin", "Cape Verde", "Democratic Republic of Congo", "Botswana", "Ivory Coast", "Algeria", "Egypt", "Equatorial Guinea", "Comoros", "Sao Tome", "Djibouti"];
 
 var userScore = [];
+var userChoice = [];
 
 let i = 0;
 export default function Game() {
@@ -107,15 +108,19 @@ export default function Game() {
     setImageSrc(CountryImages[i]);
     if (e == countryOrder[i]) {
       userScore.push(true);
+      userChoice.push(e);
     } else {
       userScore.push(false);
+      userChoice.push(e);
     }
     
     if (i == 17) {
       if (typeof window !== 'undefined') {
         const finalScore = userScore;
+        const finalChoices = userChoice;
         window.localStorage.setItem("userTime", timeOnPage);
         window.localStorage.setItem("userScore", finalScore);
+        window.localStorage.setItem("userChoices", finalChoices);
         window.location.href = "/results";
       }
     }
