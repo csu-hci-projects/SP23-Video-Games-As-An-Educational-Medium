@@ -16,6 +16,10 @@
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-media": "^1.10.0",
+    "react-native": "^0.71.5",
+    "react-native-web": "^0.19.1",
+    "react-router-dom": "^5.3.4",
     "styled-components": "^5.3.9",
     "webpack-5": "^0.0.0"
   },

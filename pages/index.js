@@ -74,8 +74,6 @@ const ColWrapper = styled.div`
 
 `
 
-const Col = styled.div`
-`
 
 export default function Home() {
   return (

@@ -10,6 +10,7 @@ const Icon = () => {
 };
 
 
+export var e;
 
 const Dropdown = ({ placeHolder, options, isSearchable }) => {
     const [showMenu, setShowMenu] = useState(false);
@@ -52,7 +53,7 @@ const Dropdown = ({ placeHolder, options, isSearchable }) => {
         if (!selectedValue) {
             return false;
         }
-
+        e = selectedValue.value;
         return selectedValue.value == option.value;
     };
 
