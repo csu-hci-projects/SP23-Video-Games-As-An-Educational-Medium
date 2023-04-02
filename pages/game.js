@@ -3,10 +3,10 @@ import Image from 'next/image';
 import styles from '@/styles/Home.module.css';
 import styled from 'styled-components';
 import samImg from "public/SamMcKay.jpg";
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import algeria from "../Outlines/Algeria.png";
 import Dropdown from '@/components/Dropdown';
-
+import {e} from "../components/Dropdown"
 
 const Hero = styled.div`
   height: 50vh;
@@ -71,8 +71,7 @@ let userScore = [];
 
 let i = 0;
 export default function Home() {
-  console.log(userScore);
-
+  const ref = React.createRef();
   var CountryImages = [
     "https://i.imgur.com/kb4q4Yx.png",
     "https://i.imgur.com/gFDdANR.png",
@@ -94,15 +93,18 @@ export default function Home() {
   ]
   const [imageSrc, setImageSrc] = useState(CountryImages[0]);
 
+
   const handleClick = () => {
     i+=1;
+
     setImageSrc(CountryImages[i]);
-    console.log(document.getElementById("droppy"));
-    if (getSelectedValue == countryOrder[i]) {
+    if (e == countryOrder[i]) {
       userScore.push(true);
     } else {
       userScore.push(false);
     }
+
+    
   };
 
   return (
@@ -117,12 +119,12 @@ export default function Home() {
         <StyledImage src={imageSrc} alt="example"/>
       </Hero>
       <Hero style={{height: "10vh"}}>
-        <Dropdown id="droppy" isSearchable placeHolder="Select A Country" options={options}/>
+        <Dropdown id = "droppy" isSearchable placeHolder="Select A Country" options={options}/>
       </Hero>
       <Hero>
         <StyledButton onClick={handleClick}><StyledText>Submit Answer</StyledText></StyledButton>
       </Hero>
     </>
 
-  );
+);
 }
