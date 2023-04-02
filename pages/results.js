@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styled from 'styled-components'
+import styles from '@/styles/Home.module.css'
 import { useState, useEffect } from 'react'
 
 const Hero = styled.div`
@@ -26,7 +27,16 @@ const Text = styled.h3`
   font-size: 2rem;
 `
 
-const Answers = styled.h4`
+const LeftAnswers = styled.h4`
+  color: #fff;
+  font-weight: 500;
+  margin-top: 6%;
+  margin-left: 15%;
+  font-size: 1.5rem;
+  width: 20%;
+`
+
+const RightAnswers = styled.h4`
   color: #fff;
   font-weight: 500;
   margin-top: 6%;
@@ -34,6 +44,26 @@ const Answers = styled.h4`
   font-size: 1.5rem;
 `
 
+const HeroCol = styled.div`
+  padding: 1rem;
+`
+const ColWrapper = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+`
+
+const DivLeft = styled(HeroCol)`
+  margin-left: 10%;
+`
+
+const DivRight = styled(HeroCol)`
+  width:10%;
+  
+`
+
+const countryOrder = ["Mali, ", "Chad, ", "Burkina, ", "Eritrea, ", "Central African Republic, ", "Angola, ", "Benin, ", "Cape Verde, ", "Democratic Republic of Congo, ", "Botswana, ", "Ivory Coast, ", "Algeria, ", "Egypt, ", "Equatorial Guinea, ", "Comoros, ", "Sao Tome, ", "Djibouti"];
 
 export default function Results() {
   const [TestTime, setTestTime] = useState('');
@@ -64,9 +94,15 @@ export default function Results() {
           <Heading>Results</Heading>
           <Text>Participant Completion Time: {TestTime} Seconds</Text>
           <Text>Percentage Correct: {score}%</Text>
-          <Text>Answer Comparison:</Text>
-          <Answers>{choices}</Answers>
-
+          <ColWrapper className={styles.colWrapper}>
+            <DivLeft className={styles.cols}>
+              <Text>Participant Answers:</Text>
+              <LeftAnswers>{choices}</LeftAnswers>
+            </DivLeft>
+            <DivRight className={styles.cols}>
+              <RightAnswers>Mali, Chad, Burkina, Eritrea, Central African Republic, Angola, Benin, Cape Verde, Democratic Republic of Congo, Botswana, Ivory Coast, Algeria, Egypt, Equatorial Guinea, Comoros, Sao Tome, Djibouti</RightAnswers>
+            </DivRight>
+          </ColWrapper>
 
       </>
     )
