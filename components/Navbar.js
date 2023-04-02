@@ -47,8 +47,8 @@ const Navbar = () => {
 					</StyledLink>
 				</li>
 				<li>
-					<StyledLink href="/game">
-						Game (dev purposes)
+					<StyledLink href="/test">
+						Test (dev purposes)
 					</StyledLink>
 				</li>
 			</StyledUl>
