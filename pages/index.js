@@ -56,25 +56,11 @@ const StyledLink = styled.a`
 	color: #E6E1FC;
 `
 
-const HeroCol = styled.div`
-  padding: 1rem;
-`
-
-const DivLeft = styled(HeroCol)`
-`
-
-const DivRight = styled(HeroCol)`
-  
-`
-
 const ColWrapper = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
 
-`
-
-const Col = styled.div`
 `
 
 export default function Home() {
