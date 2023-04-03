@@ -63,8 +63,6 @@ const DivRight = styled(HeroCol)`
   
 `
 
-const countryOrder = ["Mali, ", "Chad, ", "Burkina, ", "Eritrea, ", "Central African Republic, ", "Angola, ", "Benin, ", "Cape Verde, ", "Democratic Republic of Congo, ", "Botswana, ", "Ivory Coast, ", "Algeria, ", "Egypt, ", "Equatorial Guinea, ", "Comoros, ", "Sao Tome, ", "Djibouti"];
-
 export default function Results() {
   const [TestTime, setTestTime] = useState('');
   const [score, setScore] = useState('');
