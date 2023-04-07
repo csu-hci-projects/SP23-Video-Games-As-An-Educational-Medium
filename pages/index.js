@@ -90,8 +90,8 @@ export default function Home() {
             <Heading1>Video games as an educational medium.</Heading1>
             <Heading2>What group are you in?</Heading2>
             <ColWrapper className={styles.colWrapper}>
-              <HeroButton><StyledLink href="/group1">Group 1</StyledLink></HeroButton>
-              <HeroButton><StyledLink href="/group2">Group 2</StyledLink></HeroButton>
+            <StyledLink href="/group1"><HeroButton>Group 1</HeroButton></StyledLink>
+            <StyledLink href="/group2"><HeroButton>Group 2</HeroButton></StyledLink>
             </ColWrapper>
           </DivLeft>
         </header>
