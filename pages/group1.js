@@ -21,6 +21,33 @@ const Heading = styled.h1`
   font-weight: 900;
 `;
 
+
+const HeroButton = styled.button`
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background-color: rgba(0,0,0,0.0);
+  border-radius: 100px;
+  border: 3px solid #40F2FE;
+  margin-left: 60em;
+  margin-top: 10em;
+  height: 60px;
+  width: 200px;
+  transition: all .3s;
+  box-shadow: 0px 0px 20px rgba(202,152,254,0.5);
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 0px 20px rgba(202,152,254,1);
+  }
+`
+
+const StyledLink = styled.a`
+	padding: 0rem 2rem;
+	color: #E6E1FC;
+  margin-left: 60em;
+`
+
 // Use dynamic import to load MapContainer on the client-side
 const MapContainer = dynamic(() => import('react-leaflet').then(module => module.MapContainer), {
   ssr: false
@@ -28,6 +55,12 @@ const MapContainer = dynamic(() => import('react-leaflet').then(module => module
 const TileLayer = dynamic(() => import('react-leaflet').then(module => module.TileLayer), {
   ssr: false
 });
+
+const Map = dynamic(() => import('react-leaflet').then(module=>module.Map), {
+  ssr: false
+});
+
+
 
 export default function group1() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -57,9 +90,10 @@ export default function group1() {
       <script  src="./leaflet/dist/leaflet.js"></script>
       <script src="js/main.js"></script>
       </Head>
+      <StyledLink href="/test"><HeroButton>Next</HeroButton></StyledLink>
       <div id="map">
-        <MapContainer id="MapContainer" center={[7.1881, 21.0938]} zoom={3}>
-          <TileLayer style="z-index:0" url="https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.png" />
+        <MapContainer id="MapContainer" center={[7.1881, 21.0938]} zoom={3} attributionControl={false}>
+          <TileLayer style="z-index:1" url="https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.png" />
         </MapContainer>
       </div>
     </>
