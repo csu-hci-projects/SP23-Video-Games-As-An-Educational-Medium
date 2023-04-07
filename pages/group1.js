@@ -3,39 +3,34 @@ import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import styles from '@/styles/Home.module.css';
 import styled from 'styled-components';
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
+import dynamic from 'next/dynamic'; // import dynamic
 
 const Hero = styled.div`
-      height: 80vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #fff;`
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+`;
 
-    const Heading = styled.h1`
-      color: #000;
-      font-size: 6rem;
-      font-weight: 900;`
+const Heading = styled.h1`
+  color: #000;
+  font-size: 6rem;
+  font-weight: 900;
+`;
 
+// Use dynamic import to load MapContainer and TileLayer on the client-side
+const MapContainer = dynamic(() => import('react-leaflet').then(module => module.MapContainer), {
+  ssr: false
+});
+const TileLayer = dynamic(() => import('react-leaflet').then(module => module.TileLayer), {
+  ssr: false
+});
 
 export default function group1() {
-  const [Map, setMap] = useState(null);
-  const [TileLayer, setTileLayer] = useState(null);
-  const [Marker, setMarker] = useState(null);
 
-  useEffect(() => {
-    Promise.all([
-      import('react-leaflet').then(module => module.MapContainer),
-      import('react-leaflet').then(module => module.TileLayer),
-      import('react-leaflet').then(module => module.Marker)
-    ]).then(([Map, TileLayer, Marker]) => {
-      setMap(Map);
-      setTileLayer(TileLayer);
-      setMarker(Marker);
-    });
-  }, []);
-
-  if (!Map || !TileLayer || !Marker) {
+  if (!TileLayer) {
     return <div>Loading...</div>;
   }
 
@@ -47,10 +42,9 @@ export default function group1() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Map id = "map" center={[7.1881, 21.0938]} zoom={4}>
+      <MapContainer id="map" center={[7.1881, 21.0938]} zoom={4}>
         <TileLayer url="https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.png" />
-        <Marker position={[10, 23]}/>
-      </Map>
+      </MapContainer>
     </>
   );
 };
