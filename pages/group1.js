@@ -30,7 +30,7 @@ const HeroButton = styled.button`
   border-radius: 100px;
   border: 3px solid #40F2FE;
   margin-left: 60em;
-  margin-top: 10em;
+  margin-top: 1em;
   height: 60px;
   width: 200px;
   transition: all .3s;
