@@ -190,12 +190,12 @@ main {
 }
 
 #map {
-  height: 700px;
-  margin-top: 10%;
+  height: 800px;
+  margin-top: 2%;
 }
 
 #MapContainer {
-  height: 600px;
+  height: 800px;
 }
 
 
