@@ -58,7 +58,7 @@ export default function group1() {
       <script src="js/main.js"></script>
       </Head>
       <div id="map">
-        <MapContainer id="MapContainer" center={[7.1881, 21.0938]} zoom={2}>
+        <MapContainer id="MapContainer" center={[7.1881, 21.0938]} zoom={3}>
           <TileLayer style="z-index:0" url="https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.png" />
         </MapContainer>
       </div>
