@@ -5,15 +5,77 @@ import HighchartsReact from 'highcharts-react-official';
 import highchartsMap from "highcharts/modules/map";
 import mapDataAfrica from '../public/mapDataAfrica';
 import styles from '@/styles/game.module.css'
+import styled from 'styled-components'
+
+
+
+const Heading1 = styled.h1`
+  color: #fff;
+  font-size: 4em;
+  font-weight: 900;
+  margin-bottom: 2rem;`
+
+const Heading2 = styled.h2`
+  color: #fff;
+  font-size: 2em;
+  font-weight: 500;
+  margin-bottom: 2rem;
+`
+
+const HeroButton = styled.button`
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background-color: rgba(0,0,0,0.0);
+  border-radius: 100px;
+  border: 3px solid #40F2FE;
+  margin-right: 2em;
+  margin-top: 1em;
+  height: 60px;
+  width: 200px;
+  transition: all .3s;
+  box-shadow: 0px 0px 20px rgba(202,152,254,0.5);
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 0px 20px rgba(202,152,254,1);
+  }
+`
+
+const StyledText = styled.p`
+font-size: 14pt;
+`
+
+const StyledLink = styled.a`
+	// padding: 0rem 2rem;
+	color: #E6E1FC;
+`
+
+const HeroCol = styled.div`
+  padding: 1rem;
+`
+
+const DivLeft = styled(HeroCol)`
+`
+
+const DivRight = styled(HeroCol)`
+  
+`
+
+const ColWrapper = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+`
 
 
 if (typeof Highcharts === 'object') {
   highchartsMap(Highcharts);
 }
 
-
 const data = [
-	['ug', 1, './public.ao-03.png'], ['ng', 11], ['st', 12], ['tz', 13], ['sl', 14], ['gw', 15],
+	['ug', 1, 'https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Alabama.svg'], ['ng', 11], ['st', 12], ['tz', 13], ['sl', 14], ['gw', 15],
 	['cv', 16], ['sc', 17], ['tn', 18], ['mg', 19], ['ke', 20], ['cd', 21],
 	['fr', 22], ['mr', 23], ['dz', 24], ['er', 25], ['gq', 26], ['mu', 27],
 	['sn', 28], ['km', 29], ['et', 30], ['ci', 31], ['gh', 32], ['zm', 33],
@@ -25,6 +87,14 @@ const data = [
 	['ls', 64], ['ss', 65], ['cf', 66]
 ];
 
+// const data = [
+// 	{ 
+// 		name: 'ug',
+// 		number: 1,
+// 		image: 'https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Alabama.svg'
+// 	}
+// ]
+
 const mapOptions = {
 	chart: {
 		backgroundColor: '#21295c',
@@ -32,7 +102,7 @@ const mapOptions = {
 		height: 800,
 	},
 	title: {
-	//   text: 'African countries',
+	  text: '',
 	//   color: '#fff',
 	},
 	
@@ -47,10 +117,10 @@ const mapOptions = {
 	  {
 		mapData: mapDataAfrica,
 		name: 'Africa',
-		data: data,
 		borderColor: '#fff',
 		borderWidth: 2,
 		color: '#065a82',
+		data: data,
 		
 	  states: {
 		hover: {
@@ -80,6 +150,15 @@ const mapOptions = {
 export default function Game({ Component, pageProps }) {
 	return (
 		<main className={styles.main}>
+			<DivLeft>
+			<Heading1>African countries</Heading1>
+			<Heading2>Interactive map</Heading2>
+			<StyledText>For this exercise, please spend at least 10 minutes interacting with the map to the right. Hover over each country and try to memorize the shape of the country and its name. You can zoom in and out of the map with your mousewheel, navigate the map by clicking and dragging your cursor, and each country can be hovered over for more information.
+       When you are finished, please click 'Next' below.</StyledText>
+       <br/>
+       <StyledLink href="/test"><HeroButton>Next</HeroButton></StyledLink>
+			</DivLeft>
+
 			<div className={styles.container}>
 				<HighchartsReact
 					options={mapOptions}
