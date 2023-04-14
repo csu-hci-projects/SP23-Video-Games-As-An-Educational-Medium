@@ -120,11 +120,14 @@ export default function Home() {
                 <br/>
                 <StyledText>
                 Group one will be taken to the interactive content page that features a map of Africa and the names of each country therein. The map will feature several elements of interaction. The participants in this group will be instructed to learn as much about the geography of each country silhouette as possible as they will be matching names to country silhouettes afterward.
+                <br/>
                 Group two will be taken to the presentation content page that will feature slides on each of the African countries that they will be tested on. The presentation will consist of the country name and silhouette. The participants in this group will be instructed to learn as much as they can about the geography of each country silhouette so that they are able to match country names to silhouettes afterward.
                 </StyledText>
+                <br/>
                 <StyledText>
                 After completing the learning portion of the experiment, both groups will be directed to the same test that they took prior to the learning portion of the experiment. They will be asked to complete the test a second time.
                 </StyledText>
+                <br/>
                 <StyledText>
                 After a week of the participant returning to their daily routine we will request that they return to the designated experimentation room for further testing. Upon the second trial they will once again be reminded of their rights and then be given the same test they completed the first time they were tested. Through this we hope to see which of the mediums of education used lead to the highest rate of knowledge-retention by comparing participants previous scores and determine whether the difference in group scores is statistically significant.
                 </StyledText>
