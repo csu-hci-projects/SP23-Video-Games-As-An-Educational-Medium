@@ -13,7 +13,7 @@ if (typeof Highcharts === 'object') {
 
 
 const data = [
-	['ug', 10], ['ng', 11], ['st', 12], ['tz', 13], ['sl', 14], ['gw', 15],
+	['ug', 1, './public.ao-03.png'], ['ng', 11], ['st', 12], ['tz', 13], ['sl', 14], ['gw', 15],
 	['cv', 16], ['sc', 17], ['tn', 18], ['mg', 19], ['ke', 20], ['cd', 21],
 	['fr', 22], ['mr', 23], ['dz', 24], ['er', 25], ['gq', 26], ['mu', 27],
 	['sn', 28], ['km', 29], ['et', 30], ['ci', 31], ['gh', 32], ['zm', 33],
@@ -27,25 +27,54 @@ const data = [
 
 const mapOptions = {
 	chart: {
-		backgroundColor: '#202733'
+		backgroundColor: '#21295c',
+		width: 800,
+		height: 800,
 	},
 	title: {
-	  text: ''
+	//   text: 'African countries',
+	//   color: '#fff',
 	},
-	colorAxis: {
-	  min: 0,
-	  stops: [[0.4, '#ffffff'], [0.65, '#D5FBFF'], [1, '#40F2FE']]
-	},
+	
+	tooltip: {
+		useHTML: true,
+		borderColor: '#aaa',
+		headerFormat: '<b>{point.point.name}</b><br>',
+		pointFormat: '<img style="width: 150px; height: 100px;" src=\'{point.options.color.pattern.image}\'>'
+	  },
   
 	series: [
 	  {
 		mapData: mapDataAfrica,
 		name: 'Africa',
 		data: data,
-		borderColor: '#202733',
-		borderWidth: 1,
-	  }
-	]
+		borderColor: '#fff',
+		borderWidth: 2,
+		color: '#065a82',
+		
+	  states: {
+		hover: {
+			borderColor: '#9eb3c2',
+			borderWidth: 3,
+			color: '#1c7293',
+		}
+	  },
+	  dataLabels: {
+		enabled: true,
+		format: '{point.name}'
+	  },
+	}
+	],
+	mapNavigation: {
+		enableMouseWheelZoom: true,
+		enableDoubleClickZoomTo: true,
+	},
+	xAxis: {
+		minRange: 3500
+	},
+	mapView: {
+		zoomBy: 1
+	}
   };
 
 export default function Game({ Component, pageProps }) {
