@@ -90,7 +90,7 @@ export default function Home() {
             <Heading1>Interactive modalities for learning.</Heading1>
             <Heading2>What group are you in?</Heading2>
             <ColWrapper className={styles.colWrapper}>
-            <StyledLink href="/group1"><HeroButton>Group 1</HeroButton></StyledLink>
+            <StyledLink href="/game"><HeroButton>Group 1</HeroButton></StyledLink>
             <StyledLink href="/group2"><HeroButton>Group 2</HeroButton></StyledLink>
             </ColWrapper>
           </DivLeft>
