@@ -104,9 +104,9 @@ export default function Group2({ Component, pageProps }) {
         </DivLeft>
     
         <DivRight>
-          <StyledLink href="./Scripts/Countries PowerPoint.pdf" target="_blank"><PresThumb src="./PresentationThumbnail.png" width="100%"/></StyledLink>
+          <StyledLink href="./presentation.pdf" target="_blank"><PresThumb src="./PresentationThumbnail.png" width="100%"/></StyledLink>
           <br />
-          <DownloadLink href="./Countries PowerPoint.pdf" target="_blank">Download PDF</DownloadLink>
+          <DownloadLink href="./presentation.pdf" target="_blank">Download PDF</DownloadLink>
         </DivRight>
       </ColWrapper>
 		</main>
