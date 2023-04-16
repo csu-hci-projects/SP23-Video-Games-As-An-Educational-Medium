@@ -1,10 +1,10 @@
 .main {
 	min-height: 100vh;
-	background: #21295c;
+	background: #fff;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: #fff;
+	color: #434040;
 }
 
 .container {

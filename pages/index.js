@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 
 const Hero = styled.div`
-  height: 80vh;
+  height: 100vh;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -38,7 +38,7 @@ const HeroButton = styled.button`
   margin-right: 2em;
   margin-top: 1em;
   height: 60px;
-  width: 200px;
+  padding: 0 2rem;
   transition: all .3s;
   box-shadow: 0px 0px 20px rgba(202,152,254,0.5);
 
@@ -49,10 +49,10 @@ const HeroButton = styled.button`
 `
 
 const StyledText = styled.p`
+line-height: 1.7rem;
 `
 
 const StyledLink = styled.a`
-	padding: 0rem 2rem;
 	color: #E6E1FC;
 `
 
@@ -88,10 +88,9 @@ export default function Home() {
         <header>
           <DivLeft className={styles.cols}>
             <Heading1>Interactive modalities for learning.</Heading1>
-            <Heading2>What group are you in?</Heading2>
+            <Heading2>Are you here as a participant?</Heading2>
             <ColWrapper className={styles.colWrapper}>
-            <StyledLink href="/game"><HeroButton>Group 1</HeroButton></StyledLink>
-            <StyledLink href="/group2"><HeroButton>Group 2</HeroButton></StyledLink>
+            <StyledLink href="/welcome"><HeroButton>Go to experiment</HeroButton></StyledLink>
             </ColWrapper>
           </DivLeft>
         </header>
