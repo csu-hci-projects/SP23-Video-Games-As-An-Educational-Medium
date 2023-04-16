@@ -2,42 +2,88 @@ import Head from 'next/head';
 import styled from 'styled-components';
 import React, {useState, useEffect} from 'react';
 import Dropdown from '@/components/Dropdown';
+import styles from '@/styles/game.module.css'
 import {e} from "../components/Dropdown";
 
-const Hero = styled.div`
-  height: 50vh;
+const Heading1 = styled.h1`
+  color: #fff;
+  font-size: 4em;
+  font-weight: 900;
+  margin-bottom: 2rem;`
+
+const Heading2 = styled.h2`
+  color: #fff;
+  font-size: 2em;
+  font-weight: 500;
+  margin-bottom: 2rem;
+`
+
+const HeroButton = styled.button`
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background-color: rgba(0,0,0,0.0);
+  border-radius: 100px;
+  border: 3px solid #40F2FE;
+  margin-right: 2em;
+  margin-top: 1em;
+  height: 60px;
+  width: 200px;
+  transition: all .3s;
+  box-shadow: 0px 0px 20px rgba(202,152,254,0.5);
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 0px 20px rgba(202,152,254,1);
+  }
+`
+
+const StyledLink = styled.a`
+	color: #E6E1FC;
+`
+
+const HeroCol = styled.div`
+  padding: 2rem;
   display: flex;
-  justify-content: start;
-  align-items: flex-start;
-  background: #202733;
-  `
+  flex-direction: column;
+  max-width: 50%;
+  position: relative;
+`
+
+const DivLeft = styled(HeroCol)`
+`
+
+const DivRight = styled(HeroCol)`
+  align-items: center;
+  flex-grow: 1;
+`
+
+const ColWrapper = styled.div`
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+
+`
 
 const StyledButton = styled.button`
   font-size: 15px;
   background-color: #202733;
-  margin-left: 40%;
   border-color: #fff;
-  width: 20%;
-  height: 10%;
+  width: 100%;
   border-radius: 5px;
   margin-bottom: 3%;
 `
 
 const StyledText = styled.p`
-  margin-left: 10%;
-  font-size: 15px;
-  max-width: 80%;
-
+font-size: 14pt;
 `
 
 const StyledImage = styled.img`
-  height: 200px;
-  width: 250px;
-  margin-top: 10%;
-  margin-bottom: 2%;
+  height: 300px;
+  width: auto;
+  margin-bottom: 1rem;
   postion: static;
-  margin-left: 42%;
-  display: block;
+
 `
 
 
@@ -58,7 +104,9 @@ const options = [
   { value: " Eritrea", label: "Eritrea"},
   { value: " Ivory Coast", label: "Ivory Coast"},
   { value: " Mali", label: "Mali"},
-  { value: " Sao Tome and Principe", label: "Sao Tome and Principe"}
+  { value: " Sao Tome and Principe", label: "Sao Tome and Principe"},
+  { value: " I don't know", label: "I don't know"}
+  
 ]
 
 const countryOrder = ["Mali", "Chad", "Burkina", "Eritrea", "Central African Republic", "Angola", "Benin", "Cape Verde", "Democratic Republic of Congo", "Botswana", "Ivory Coast", "Algeria", "Egypt", "Equatorial Guinea", "Comoros", "Sao Tome", "Djibouti"];
@@ -134,15 +182,28 @@ export default function Game() {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Hero>
-        <StyledImage src={imageSrc} alt="example"/>
-      </Hero>
-      <Hero style={{height: "10vh"}}>
-        <Dropdown isSearchable placeHolder="Select A Country" options={options}/>
-      </Hero>
-      <Hero>
-        <StyledButton onClick={handleClick}><StyledText>Submit Answer</StyledText></StyledButton>
-      </Hero>
+      <main className={styles.main}>
+        <ColWrapper>
+          <DivLeft>
+          <Heading1>African countries</Heading1>
+          <Heading2>Test your knowledge</Heading2>
+          <StyledText>For this exercise, please do your best to match each country to its name using the dropdown below the image. If you are unsure, please select "I don't know" at the bottom of the dropdown list. After you have selected, submit your answer by pressing the 'submit answer' button. </StyledText>
+          <br/>
+          
+          </DivLeft>
+          <DivRight>
+        
+          <StyledImage src={imageSrc} alt="example"/>
+        
+        
+            <Dropdown className={styles.Dropdown} isSearchable placeHolder="What country is this?" options={options}/>
+      
+            <HeroButton onClick={handleClick}>Submit Answer</HeroButton>
+          
+        
+          </DivRight>
+        </ColWrapper>
+      </main>
     </>
 
 );

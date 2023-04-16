@@ -52,7 +52,7 @@ const StyledLink = styled.a`
 `
 
 const HeroCol = styled.div`
-  padding: 1rem;
+  padding: 2rem;
 `
 
 const DivLeft = styled(HeroCol)`

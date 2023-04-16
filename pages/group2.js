@@ -47,21 +47,46 @@ const StyledLink = styled.a`
 	color: #E6E1FC;
 `
 
+const DownloadLink = styled(StyledLink)`
+margin: 2rem 0;
+font-weight: 700;
+font-size: 14pt;
+transition: all .2s;
+
+&:hover {
+  color: #fff;
+}`
+
 const HeroCol = styled.div`
-  padding: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
 `
 
 const DivLeft = styled(HeroCol)`
 `
 
 const DivRight = styled(HeroCol)`
-  
+align-items: center;
 `
 
 const ColWrapper = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+
+`
+
+const PresThumb = styled.img`
+border: 3px solid #40F2FE;
+transition: all .2s;
+box-shadow: 0px 0px 50px rgba(202,152,254,0.2);
+
+&:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 0px 20px rgba(202,152,254,1);
+}
+
 
 `
 
@@ -77,9 +102,11 @@ export default function Group2({ Component, pageProps }) {
         <br/>
         <StyledLink href="/test"><HeroButton>Next</HeroButton></StyledLink>
         </DivLeft>
-          <img src="public/PresentationThumbnail.png" />
+    
         <DivRight>
-          
+          <StyledLink href="./Scripts/Countries PowerPoint.pdf" target="_blank"><PresThumb src="./PresentationThumbnail.png" width="100%"/></StyledLink>
+          <br />
+          <DownloadLink href="./Countries PowerPoint.pdf" target="_blank">Download PDF</DownloadLink>
         </DivRight>
       </ColWrapper>
 		</main>
