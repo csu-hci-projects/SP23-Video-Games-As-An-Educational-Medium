@@ -98,7 +98,7 @@ const options = [
   { value: "Chad", label: "Chad"},
   { value: "Comoros", label: "Comoros"},
   { value: "Djibouti", label: "Djibouti"},
-  { value: "Democratic Republic of the Congo", label: "Democratic Republic of the Congo"},
+  { value: "Democratic Republic of Congo", label: "Democratic Republic of the Congo"},
   { value: "Egypt", label: "Egypt"},
   { value: "Equatorial Guinea", label: "Equatorial Guinea"},
   { value: "Eritrea", label: "Eritrea"},
@@ -109,7 +109,7 @@ const options = [
   
 ]
 
-const countryOrder = ["Mali", "Chad", "Burkina Faso", "Eritrea", "Central African Republic", "Angola", "Benin", "Cape Verde", "Democratic Republic of Congo", "Botswana", "Ivory Coast", "Algeria", "Egypt", "Equatorial Guinea", "Comoros", "Sao Tome", "Djibouti"];
+const countryOrder = ["Mali", "Chad", "Burkina Faso", "Eritrea", "Central African Republic", "Angola", "Benin", "Cape Verde", "Democratic Republic of Congo", "Botswana", "Ivory Coast", "Algeria", "Egypt", "Equatorial Guinea", "Comoros", "Sao Tome and Principe", "Djibouti"];
 
 var userScore = [];
 var userChoice = [];
@@ -151,10 +151,11 @@ export default function Game() {
 
 
   const handleClick = () => {
+    let right = e == countryOrder[i];
     i+=1;
-
     setImageSrc(CountryImages[i]);
-    if (e == countryOrder[i]) {
+    console.log(e);
+    if (right) {
       userScore.push(true);
       userChoice.push(e);
     } else {
@@ -196,9 +197,9 @@ export default function Game() {
           <StyledImage src={imageSrc} alt="example"/>
         
         
+            <HeroButton onClick={handleClick}>Submit Answer</HeroButton>
             <Dropdown className={styles.Dropdown} isSearchable placeHolder="What country is this?" options={options}/>
       
-            <HeroButton onClick={handleClick}>Submit Answer</HeroButton>
           
         
           </DivRight>
