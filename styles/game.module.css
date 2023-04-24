@@ -14,3 +14,21 @@
 .Dropdown {
 	width: 100%;
 }
+
+.highcharts-tooltip {
+	opacity: 0;
+	transition: opacity 0.2s ease-in-out;
+  }
+  
+  .highcharts-tooltip:hover {
+	opacity: 1;
+  }
+  
+  .highcharts-image {
+	opacity: 0;
+	transition: opacity 0.2s ease-in-out;
+  }
+  
+  .highcharts-image:hover {
+	opacity: 1;
+  }
