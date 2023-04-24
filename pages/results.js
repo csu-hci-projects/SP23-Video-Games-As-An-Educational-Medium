@@ -71,10 +71,17 @@ export default function Results() {
   
   useEffect(() => {
     const time = window.localStorage.getItem('userTime');
-    const score = window.localStorage.getItem('userScore');
+    const score = window.localStorage.getItem('userScore').split(",");
     const answers = window.localStorage.getItem('userChoices');
-    const count = score.split('true').length-1;
-    const result = count / 17;
+    let numRight = 0;
+    let i;
+    for (i = 0; i < score.length; i++) {
+      console.log(score[i]);
+      if (score[i] === "true") {
+        numRight++;
+      }
+    }
+    const result = numRight / 17;
 
     setTestTime(time);
     setScore((result*100).toFixed(2));
