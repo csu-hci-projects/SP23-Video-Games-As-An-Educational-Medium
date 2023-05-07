@@ -1,0 +1,236 @@
+
+\documentclass[manuscript,screen]{acmart}
+
+%% \BibTeX command to typeset BibTeX logo in the docs
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
+
+\begin{document}
+
+\title{Video Games as an Educational Medium}
+
+\author{Jordan Rust}
+\email{rustjt@rams.colostate.edu}
+\affiliation{%
+  \institution{Colorado State University}
+  \city{Fort Collins}
+  \state{Colorado}
+  \country{USA}
+}
+
+\author{Sam McKay}
+\email{Sammckay@colostate.edu}
+\affiliation{%
+  \institution{Colorado State University}
+  \city{Fort Collins}
+  \state{Colorado}
+  \country{USA}
+}
+
+\author{Jenelle Dobyns}
+\email{jenelledobyns@gmail.com}
+\affiliation{%
+  \institution{Colorado State University}
+  \city{Fort Collins}
+  \state{Colorado}
+  \country{USA}
+}
+
+\author{Bailey Hust}
+\email{Bailey.Hust@colostate.edu}
+\affiliation{%
+  \institution{Colorado State University}
+  \city{Fort Collins}
+  \state{Colorado}
+  \country{USA}
+}
+
+\renewcommand{\shortauthors}{Rust and McKay, et al.}
+
+\begin{abstract}
+  Video games are an increasingly prevalent form of entertainment, but their potential expands beyond just passing the time. The pedagogy of higher education has little deviation from the tried and true methods used in classrooms. Methods such as a professor reading to the classroom have been the norm, but what if there were more efficient ways to enable understanding in students? This paper aims to determine if interactive educational mediums can be used as an effective teaching strategy in classrooms.
+\end{abstract}
+
+\begin{CCSXML}
+<ccs2012>
+ <concept>
+  <concept_id>10010520.10010553.10010562</concept_id>
+  <concept_desc>Computer systems organization~Embedded systems</concept_desc>
+  <concept_significance>500</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10010520.10010575.10010755</concept_id>
+  <concept_desc>Computer systems organization~Redundancy</concept_desc>
+  <concept_significance>300</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10010520.10010553.10010554</concept_id>
+  <concept_desc>Computer systems organization~Robotics</concept_desc>
+  <concept_significance>100</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10003033.10003083.10003095</concept_id>
+  <concept_desc>Networks~Network reliability</concept_desc>
+  <concept_significance>100</concept_significance>
+ </concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Learning and Education}
+\ccsdesc[500]{Software prototyping}
+
+\maketitle
+
+\section{Introduction}
+As students, being able to learn something new efficiently and effectively is critical for success in school. The mediums used by teachers have remained relatively unaltered for many years, as these methods have been proven to work for most students. Although learning has been associated with the traditional teaching method of teachers giving students information through lectures and PowerPoint presentations, much research has been done to learn more about how the human brain learns new information \cite{Kolb01}. However, just because something works, does not mean it cannot be further developed \cite{Adcock08}\cite{Hooper11}. Technology has gone through rapid evolution in the past 100 years, presenting an increasing number of tools that educators can use \cite{Oleson14}. A great example of this happened during the recent COVID-19 pandemic, with a large percentage of students using online methods for learning. Studies have suggested these methods have proved to be more effective as a teaching medium over classical methods, however, students still prefer learning in a physical classroom \cite{Karamazova21}.
+
+Video games are just one of the most recent developments, with a growing number of younger generations adopting them into their lives. It has been found that some video games can create a basis upon which students can expand and learn new information more effectively than others who haven’t played video games \cite{Arena15}. Using an interactive educational medium to teach allows students to have more fun learning the information \cite{COLLER09} and could be more effective than traditional teaching methods \cite{Arena15}. With further research, there can be many new ways of teaching and presenting new information to modern students.
+
+
+\section{Related Works}
+Education is a controversial field of research, as is most of human psychology, as not enough information is definitively known. But education does not reside fully in psychology, rather it can involve other theoretical approaches, such as sociology, ethics, and history. With all these moving parts, determining what is known versus unknown presents its own problems. Much of the research that is conducted is very specific, often so specific that forming conclusions is difficult. Generalizing research can lead to forming false conclusions, which in the world of research for education happens frequently \cite{Smeyers12}. Conclusions are based on current knowledge, which is subject to change. Things such as bias and the methodology of the studies play a large role in determining if the conclusion is valid for different situations \cite{PLoS05}. Such an example is the myth of ‘learning styles’, such as 'kinesthetic' and 'visual', which is still believed to be an effective teaching method \cite{Reynolds21}.
+
+Most preconceived notions have an element of truth involved, but determining what is fact and fiction is the hardest part of interpreting results from studies. Not everything is entirely factual, but proper use of the scientific method helps determine if something is repeatable in a controlled environment. One such study compared the different Kolb learning styles to determine which had any effect on learning results \cite{Compton16}. Similar studies were conducted to determine if being taught in one's preferred learning style has an impact on stronger learning \cite{Lu16}. 
+
+Learning styles suggest students have different needs and to get the most effective learning, teachers must take these differences into account. This is a concept supported by research, as students come from different backgrounds, be it previous experiences or even genetic differences. However, it is important to note that while individuals may have different preferred learning styles, there is no evidence to suggest that one style leads to better or faster learning outcomes. Instead, a favorite mode of presentation (visual, auditory, or kinesthetic) for a student is a preference for tasks that an individual has a higher aptitude for rather than a learning style \cite{Riener10}. 
+
+The notion of learning styles is one of many myths formed around education, and it will not be the last. When applied to games, many myths form obstacles in determining the relationship between video games and education. One such myth is students can readily transfer learning from games to understanding in the classroom. This would be very convenient but it cannot be assumed to be true, as just one method cannot guarantee successful learning. Rather, video games would need to be integrated into other teaching practices to facilitate improved learning and understanding \cite{McTigue18}. Video games work with inert knowledge, which is context-based. This means students will have trouble moving something that they know from a game to a different situation, such as applying skills learned from games in the real world \cite{Renkl96}. 
+
+Interactive educational mediums cannot fully replace other forms of learning in classrooms, as education is far too broad of a subject for one method alone. Without the aid of teacher intervention, video games would not be able to find a balance for each student’s learning path \cite{Silver04}. Video games are limited by their inability to adapt to the needs of students. When students fall behind, a teacher can alter the course load to ensure they get the most out of the information being taught \cite{Berg98}. What determines the effectiveness of an interactive medium in education is the nature of the software, the influence of the teacher, the time and effort put in by the student, and the other methods that are integrated \cite{Cheung13}\cite{Kocaleva15}\cite{meral19}\cite{Wang03}. Also, the information being graded is still graded in the traditional way, meaning any un-traditional learning methods have to overcome this gap \cite{Barone08}. In other words, there are many factors that influence the effectiveness of video games as an educational medium.
+
+There are many factors to consider when evaluating the potential of video games as an effective teaching tool. Balancing entertainment value with educational content is crucial, as an excessively dry game may lead to the target audience becoming disengaged, thus hampering their ability to retain the information presented. A larger focus on the entertainment factor means the game will be less targeted towards learning, resulting in a decrease in information learned \cite{Giannakas18}\cite{Baltra90}. Since the goal of the game is to promote learning, the way the audience feels about the software changes \cite{Vogel06}\cite{Tallim04}. If users feel they are learning from the game, they are more willing to overlook any downsides in aesthetics or functionalities\cite{Imam22}. This is one of the major issues with research involving determining the effectiveness of interactive educational mediums, as the most popular ways involve qualitative research. This presents much variability and makes it difficult to determine what is effective or what is perceived as effective \cite{Bodnar16}.
+
+\section{Methods}
+
+\subsection{Methodology}
+
+This study was run as a between-subjects (i.e. non-repeated measures) experimental study. The goal of this experiment was to gain a better understanding of the learning process in an interactive, educational medium. Specifically, this study aimed to compare the effectiveness of an interactive map game \textit{Geopursuit} which was developed solely for this experiment. Participants were split into two groups, Group 1 and Group 2, with a total of 20 participants randomly assigned. Members of Group 1 were given access to the interactive map game \textit{GeoPursuit}. \textit{GeoPursuit} had users interact with a map of the continent Africa, allowing them to drag their cursor around the map to display information about the currently selected country. Group 1 was introduced to this game and given a set amount of time to become familiar with the software. Once each participant was ready, a 15-minute timer began for users to begin studying the countries of Africa using \textit{GeoPursuit}. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.15]{africa.png}
+    \caption{Top: the initial game given to Group 1, Bottom: ending of the game to reinforce skills learned}
+    \label{fig:my_label1}
+\end{figure}
+
+
+Group 2 did not have access to \textit{GeoPursuit}, in its place they were provided a video presentation on the countries of Africa. This presentation consisted of slides of text and images along with a recorded voice-over. The presentation provided context and learning devices for learning the names of countries in Africa. The video shown to Group 2 was approximately 15 minutes long.
+
+After 15 minutes passed, the procedure for both Group 1 and Group 2 were identical. Participants were instructed to take a five-minute break, after which the participants began a quiz. The quiz consisted of ten randomly chosen countries from Africa, where participants had to choose the correct name from a drop-down of potential countries. The participants only saw the silhouette of the country, with no other additional information. After 10 minutes, the quiz period ended and the score for each participant was calculated.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{fig1.PNG}
+    \caption{the quiz given to both Group 1 and Group 2}
+    \label{fig:my_label2}
+\end{figure}
+
+\subsection{Participants}
+The experiment was conducted with a total of 20 volunteer participants (10 Male, 10 Female). Most participants were students who were recruited from the course CS 464 and a small number were not enrolled in CS 464 and had no previous knowledge of African countries.
+
+\subsection{Procedure}
+For each session, participants started by signing the informed consent and were informed of the methodology of the experiment as well as an explanation of the research questions we hoped to answer. During the initial practice time for Group 1, participants were able to ask any questions about the layout and functions of \textit{GeoPursuit}. Participants were alerted to the tools and methods provided by the software.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.15]{test_your_knowledge.png}
+    \caption{exercise for Group 1's learning period}
+    \label{fig:my_label2}
+\end{figure}
+
+Once the learning period for both groups was concluded, the quiz was given to each participant. No questions could be answered relating to the content of the quiz. After the time allotted for the quiz was concluded, any question that was left unanswered was marked as incorrect. Participants were then given a questionnaire consisting of questions about their expectations of their performance on the quiz and how much they learned from their treatment.
+
+Another session was scheduled for each participant to determine their knowledge retention after the initial experiment. Participants were given a similar quiz a small number of days after the initial experiment, the results of which were recorded.
+
+\section{Results}
+The information collected from each participant was the accuracy of their test scores, their rating of the method on a scale from 1-10, the time it took to take the test, and the number of questions the participants answered as "I don't know", which will be referred to as a non-response. From these measurements, Group 1 had an average correct score of 26.05\%. Group 2 had a higher percentage of correct answers, with an average of 35.29\%.
+
+\begin{table}[h]
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Source}                                               & \textbf{SS} & \textbf{df} & \textbf{MS} &                                                                                             \\ \hline
+\begin{tabular}[c]{@{}c@{}}Between-\\ treatments\end{tabular} & 5           & 1           & 5           & {\color[HTML]{FE0000} \textbf{F=1.1658}}                                                    \\ \hline
+\begin{tabular}[c]{@{}c@{}}Within-\\ treatments\end{tabular}  & 77.2        & 18          & 4.2889      & {\color[HTML]{FE0000} \textbf{\begin{tabular}[c]{@{}c@{}}p-value=\\ 0.294521\end{tabular}}} \\ \hline
+Total                                                         & 82.2        & 19          &             &                                                                                             \\ \hline
+\end{tabular}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Source}                                               & \textbf{SS} & \textbf{df} & \textbf{MS} &                                                                                             \\ \hline
+\begin{tabular}[c]{@{}c@{}}Between-\\ treatments\end{tabular} & 9592.2           & 1           & 9592.2          & {\color[HTML]{FE0000} \textbf{F = 1.35891}}                                                    \\ \hline
+\begin{tabular}[c]{@{}c@{}}Within-\\ treatments\end{tabular}  & 127057.6        & 18          & 7058.7556     & {\color[HTML]{FE0000} \textbf{\begin{tabular}[c]{@{}c@{}}p-value=\\ 0.258942\end{tabular}}} \\ \hline
+Total                                                         & 136649.8        & 19          &             &                                                                                             \\ \hline
+\end{tabular}
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Source}                                               & \textbf{SS} & \textbf{df} & \textbf{MS} &                                                                                             \\ \hline
+\begin{tabular}[c]{@{}c@{}}Between-\\ treatments\end{tabular} & 12.8           & 1           & 12.8          & {\color[HTML]{00FF00} \textbf{F = 5.45972}}                                                    \\ \hline
+\begin{tabular}[c]{@{}c@{}}Within-\\ treatments\end{tabular}  & 42.2        & 18          & 2.3444     & {\color[HTML]{00FF00} \textbf{\begin{tabular}[c]{@{}c@{}}p-value=\\ 0.031221\end{tabular}}} \\ \hline
+Total                                                         & 55        & 19          &             &                                                                                             \\ \hline
+\end{tabular}
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Source}                                               & \textbf{SS} & \textbf{df} & \textbf{MS} &                                                                                             \\ \hline
+\begin{tabular}[c]{@{}c@{}}Between-\\ treatments\end{tabular} & 6.05           & 1           & 6.05          & {\color[HTML]{FE0000} \textbf{F =0.62984}}                                                    \\ \hline
+\begin{tabular}[c]{@{}c@{}}Within-\\ treatments\end{tabular}  & 172.9        & 18          & 9.6056     & {\color[HTML]{FE0000} \textbf{\begin{tabular}[c]{@{}c@{}}p-value=\\ 0.43775\end{tabular}}} \\ \hline
+Total                                                         & 178.95        & 19          &             &                                                                                             \\ \hline
+\end{tabular}
+
+    \caption{ANOVA table for determining the variance in the following order from top to bottom: correct scores, test time, method rating, and non-response answers}
+    \label{fig:my_label6}
+\end{table}
+
+An Analysis of Variance test was used to determine if the variance between the two groups' correct scores was significant. This test resulted in an F=1.1658 and a p-value=0.294521. Since our p-value is greater than our significance level of 0.05, we fail to reject the null hypothesis that there is a difference between group 1's scores and group 2's scores. The only ANOVA test that was significant was the method rating, with Group 2 having a higher method rating average than Group 1.
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.4]{Average Correct Answers for Group 1 and Group 2.png}
+    \caption{Percentage for correct answers for both groups}
+    \label{fig:my_label3}
+\end{figure}
+
+In terms of time taken to complete the test, Group 1 had a higher average of time taken, with an average time of 269.71 seconds. Group 2 had an average time of 248.83 seconds.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.4]{Average Time Taken For Group 1 and Group 2.png}
+    \caption{Average time in seconds that each group took to finish the test}
+    \label{fig:my_label4}
+\end{figure}
+
+The individual ratings for how well each participant felt the method used helped teach them provided similar results. Group 1 had an average rating of 3/10, while Group 2 had an average rating of 4.5/10.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.4]{Average Group Rating for Method.png}
+    \caption{Average rating of the method given to each group out of a possible score of 10}
+    \label{fig:my_label5}
+\end{figure}
+
+\section{Discussion}
+The results shown above indicate the null hypothesis was not rejected. Group 1 was given the interactive map game, with the hypothesis being the participants would score higher on the test and feel more confident in the material being taught. This was not the case, as Group 1 had lower scores on the test and gave lower ratings on the effectiveness of their instructional method than the alternative method of Group 2.
+
+While several participants in Group 2 noted that the video was difficult to concentrate on due to its length, the participants had an overall higher average score and personal ratings. In fact, Group 2 participants took less time and also had less doubt in their work, evidenced by the lower average of questions marked as "I don't know".
+
+Some possible explanations for these disparities could be related to the way each group was instructed to learn the material. In Group 2's video, all the information was explicitly described and the participants were instructed to absorb the material to the best of their ability. In contrast, in Group 1, the information is presented to the participant, but they must actively interact with it to facilitate learning. As a result, the amount of information retained depended on the individual and the effort they put into interacting with the map game. Not to mention that learning in general is a social process, as interacting with others can help the learning process and develop stronger connections between material \cite{Lilly07}\cite{Rozalind04}. 
+
+Some ways to combat this could be giving the participants in Group 1 a concrete goal to achieve, such as earning a certain amount of points or correct guesses by the end of their session. The current version of the game lacks a clear learning objective or structure, which may limit users' motivation to engage with the material. Therefore, incorporating a more defined learning goal or structure could potentially enhance users' learning experience and improve learning outcomes.
+
+ 
+
+\section{Limitations of the Study}
+This study has many limitations that prevented any clear conclusions. The sample size and selection of participants limited any definitive conclusions that could be gathered, as the majority of this experiment's participants were from the class of CS 464, meaning a very narrow selection that presents sample bias. The restricted sample size for this study resulted in the inability to identify any significant relationships in the data. To overcome these limitations, future studies may need to increase the sample size and diversify the participant pool to reduce sample bias and improve the ability to identify significant relationships in the data.
+
+This experiment was unique in its approach to understanding the relationship between interactive games and learning, meaning few studies were directly relevant. This presents literature gaps and demonstrates the need for more development in this field of study. Time constraints, limited sampling, and other restricting factors mentioned previously had a large impact on the limitations of this study. There is a need for future studies on this topic to reach an informed conclusion supported by large amounts of data.
+
+\section{Conclusions}
+Given the ratings for both Groups, it is clear there is room for improvement in the teaching methods of each of these groups. Both groups had a low personal effectiveness rating for the two methods provided, along with a relatively low accuracy of answers on the test. Participants did gain relatively higher scores and gave higher effectiveness ratings with a simple PowerPoint presentation, but that does not mean that this is always the case. There are many ways to improve the interactive game to promote stronger learning, such as by giving users goals and objectives or making users follow a stricter rule set. 
+
+The PowerPoint video is an effective baseline for a method of teaching in a classroom setting, but there is a myriad of improvements that can be applied to this study to more accurately determine several successful teaching strategies. Future studies are needed to determine these improvements and possible opportunities for improving learning rates in educational environments.
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{sample-base}
+
+\end{document}
